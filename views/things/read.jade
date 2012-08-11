@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  - if (thing)
+    h2 #{thing.title}
+    p #{thing.body}
+  - else
+    p thing not found

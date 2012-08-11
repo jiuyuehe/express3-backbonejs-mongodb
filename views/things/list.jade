@@ -1,0 +1,21 @@
+extends bootstrap
+
+block content
+  h1 list of things
+
+  div#thingsList
+    p list initially from server
+    ul.things
+      each thing in things
+        li
+          a(href='/things/' + thing.id)= thing.title
+          |  -
+          | #{thing.body}
+
+  div#backboneThingsList
+    p from backbone...
+
+  p#bbnote (for backbone example, include either app.js or app2.js in bootstrap.jade)
+
+  script
+    var data = !{data};
