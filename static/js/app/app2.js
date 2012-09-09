@@ -84,6 +84,7 @@ $(function(){
   SA.ThingsList = Backbone.Collection.extend({
     model: SA.Thing,
     url: '/things.json',
+    // BELOW NOT REQUIRED, USE backbone events
     initialize: function () {
       this.fetch({
         success: this.fetchSuccess,
